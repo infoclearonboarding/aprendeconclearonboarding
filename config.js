@@ -4,8 +4,8 @@
  */
 window.FUNNEL_CONFIG = {
   // 1. Enlaces principales del funnel (Sección 2 del README)
-  ENLACE_PDF: "./assets/Las-10-reglas-de-oro-Clear-Onboarding.pdf", // Reemplazar por la URL pública final del PDF
-  ENLACE_AGENDA: "https://calendly.com/clearonboarding/15min",      // Reemplazar por el enlace real de Calendly / GHL / Google Calendar
+  ENLACE_PDF: "/assets/Las-10-reglas-de-oro-Clear-Onboarding.pdf", // PDF oficial de 16 páginas alojado en /assets/
+  ENLACE_AGENDA: "https://wa.me/584124784922?text=Hola%2C%20descargu%C3%A9%20la%20gu%C3%ADa%20de%20las%2010%20reglas%20de%20oro%20y%20quiero%20ver%20c%C3%B3mo%20funciona%20Clear%20Onboarding", // Enlace de contacto / agenda (pág. 15 del PDF)
   DIRECCION_POSTAL: "Clear Onboarding LLC · Estados Unidos",        // Dirección física para cumplimiento CAN-SPAM
 
   // 2. Conexión con Netlify Function (/api/lead) + Resend + Supabase
@@ -25,11 +25,11 @@ window.FUNNEL_CONFIG = {
   TIKTOK_PIXEL_ID: "",   // Ej: "CXXXXXXXXXXXXXXX"
   GA4_MEASUREMENT_ID: "",// Ej: "G-XXXXXXXXXX"
 
-  // 4. Textos de vista previa de páginas interiores (Sección 4.4 del README)
+  // 4. Textos reales de vista previa de páginas interiores del PDF (Sección 4.4 del README)
   PAGINAS_PREVIEW: [
-    { n: "01", regla: "Llega a tiempo. Si no puedes, avisa antes.", tf: "rotate(-9deg) translateY(10px)", z: 1 },
-    { n: "04", regla: "Cada casa se limpia en el mismo orden.", tf: "translateY(-8px)", z: 3 },
-    { n: "07", regla: "Lo que ves en casa del cliente, se queda ahí.", tf: "rotate(9deg) translateY(10px)", z: 2 }
+    { n: "01", regla: "El servicio se hace entre todos: quien termina, ayuda.", tf: "rotate(-9deg) translateY(10px)", z: 1 },
+    { n: "04", regla: "Con uniforme, eres la empresa.", tf: "translateY(-8px)", z: 3 },
+    { n: "07", regla: "El celular es herramienta de trabajo, no distracción.", tf: "rotate(9deg) translateY(10px)", z: 2 }
   ],
 
   // 5. Pendiente Sección 8: Video de TikTok (desactivado hasta que el cliente entregue el MP4)

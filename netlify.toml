@@ -16,10 +16,46 @@
   status = 200
   force = true
 
-# Si alguien entra a /gracias en la raíz, llevarlo a /guia/gracias/
+# Redirecciones amigables hacia la URL principal del Lead Magnet
+[[redirects]]
+  from = "/"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/Las 10 reglas de oro de un equipo de limpieza"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/"
+  status = 301
+
+[[redirects]]
+  from = "/las-10-reglas-de-oro"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/"
+  status = 301
+
+[[redirects]]
+  from = "/guia"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/"
+  status = 301
+
+[[redirects]]
+  from = "/guia/"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/"
+  status = 301
+
+[[redirects]]
+  from = "/guia/gracias"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/gracias/"
+  status = 301
+
+[[redirects]]
+  from = "/guia/gracias/"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/gracias/"
+  status = 301
+
 [[redirects]]
   from = "/gracias"
-  to = "/guia/gracias/"
+  to = "/las-10-reglas-de-oro-de-un-equipo-de-limpieza/gracias/"
   status = 301
 
 [[headers]]
@@ -33,4 +69,3 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-

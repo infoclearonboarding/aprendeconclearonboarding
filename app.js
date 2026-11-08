@@ -178,9 +178,9 @@
     // Poblar abanico de páginas interiores si existe el contenedor
     const pagesFanEl = document.getElementById("preview-pages-fan");
     const paginas = CFG.PAGINAS_PREVIEW || [
-      { n: "01", regla: "Llega a tiempo. Si no puedes, avisa antes.", tf: "rotate(-9deg) translateY(10px)", z: 1 },
-      { n: "04", regla: "Cada casa se limpia en el mismo orden.", tf: "translateY(-8px)", z: 3 },
-      { n: "07", regla: "Lo que ves en casa del cliente, se queda ahí.", tf: "rotate(9deg) translateY(10px)", z: 2 }
+      { n: "01", regla: "El servicio se hace entre todos: quien termina, ayuda.", tf: "rotate(-9deg) translateY(10px)", z: 1 },
+      { n: "04", regla: "Con uniforme, eres la empresa.", tf: "translateY(-8px)", z: 3 },
+      { n: "07", regla: "El celular es herramienta de trabajo, no distracción.", tf: "rotate(9deg) translateY(10px)", z: 2 }
     ];
     if (pagesFanEl) {
       pagesFanEl.innerHTML = paginas.map(function (p) {
