@@ -251,9 +251,11 @@ export async function handler(event) {
   const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || "mayegomezconsultor@gmail.com";
   const ENABLE_24H_TRIGGER = process.env.ENABLE_24H_TRIGGER !== "false";
 
-  const SITE_URL = process.env.URL || "https://guia.clearonboarding.com";
+  const SITE_URL = process.env.URL || "https://precious-begonia-ea8d3c.netlify.app";
   const ENLACE_PDF = process.env.ENLACE_PDF || `${SITE_URL}/assets/Las-10-reglas-de-oro-Clear-Onboarding.pdf`;
-  const ENLACE_AGENDA = process.env.ENLACE_AGENDA || "https://calendly.com/clearonboarding/15min";
+  const ENLACE_AGENDA =
+    process.env.ENLACE_AGENDA ||
+    "https://wa.me/584124784922?text=Hola%2C%20descargu%C3%A9%20la%20gu%C3%ADa%20de%20las%2010%20reglas%20de%20oro%20y%20quiero%20ver%20c%C3%B3mo%20funciona%20Clear%20Onboarding";
   const DIRECCION_POSTAL = process.env.DIRECCION_POSTAL || "Clear Onboarding LLC, Estados Unidos";
   const ENLACE_BAJA = process.env.ENLACE_BAJA || `${SITE_URL}/politica-de-privacidad/`;
   const URL_LOGO = process.env.URL_LOGO || `${SITE_URL}/assets/logo-color.png`;
