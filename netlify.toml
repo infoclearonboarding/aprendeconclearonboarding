@@ -1,0 +1,36 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Endpoint principal para capturar el lead (Supabase + Resend + Triggers)
+[[redirects]]
+  from = "/api/lead"
+  to = "/.netlify/functions/lead"
+  status = 200
+  force = true
+
+# Endpoint para recibir Webhooks de Resend (email.opened, email.clicked, etc.)
+[[redirects]]
+  from = "/api/resend-webhook"
+  to = "/.netlify/functions/resend-webhook"
+  status = 200
+  force = true
+
+# Si alguien entra a /gracias en la raíz, llevarlo a /guia/gracias/
+[[redirects]]
+  from = "/gracias"
+  to = "/guia/gracias/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
