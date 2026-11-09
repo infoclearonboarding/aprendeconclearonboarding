@@ -251,7 +251,7 @@ export async function handler(event) {
   const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || "mayegomezconsultor@gmail.com";
   const ENABLE_24H_TRIGGER = process.env.ENABLE_24H_TRIGGER !== "false";
 
-  const SITE_URL = process.env.URL || "https://precious-begonia-ea8d3c.netlify.app";
+  const SITE_URL = process.env.URL || "https://go.clearonboarding.com";
   const ENLACE_PDF = process.env.ENLACE_PDF || `${SITE_URL}/assets/Las-10-reglas-de-oro-Clear-Onboarding.pdf`;
   const ENLACE_AGENDA =
     process.env.ENLACE_AGENDA ||
