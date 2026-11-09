@@ -3,6 +3,33 @@
  * Funnel: "Las 10 reglas de oro de un equipo de limpieza" — Clear Onboarding
  */
 (function () {
+  // Purga inmediata de badges o iframes publicitarios inyectados por la plataforma de hosting
+  function purgeNetlifyBadges() {
+    var selectors = [
+      'iframe[src*="netlify"]',
+      'iframe[title*="Netlify" i]',
+      'iframe[id*="netlify" i]',
+      '[id*="netlify-badge" i]',
+      '[class*="netlify-badge" i]',
+      '[data-netlify-badge]',
+      'netlify-badge',
+      'div[style*="2147483647"]'
+    ];
+    selectors.forEach(function(sel) {
+      document.querySelectorAll(sel).forEach(function(el) {
+        if (!el.closest('form')) {
+          el.remove();
+        }
+      });
+    });
+  }
+  purgeNetlifyBadges();
+  window.addEventListener('load', purgeNetlifyBadges);
+  try {
+    var obs = new MutationObserver(purgeNetlifyBadges);
+    obs.observe(document.documentElement || document.body, { childList: true, subtree: true });
+  } catch (e) {}
+
   const CFG = window.FUNNEL_CONFIG || {};
 
   const ESTADOS = [
